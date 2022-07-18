@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+
+*,
+*::before,
+*::after{
+  margin:0;
+  padding:0;
+  border:0;
+  box-sizing: border-box;
+  font-family: 'Roboto';
+
+}
+
+*,*:focus,*:hover{
+  outline:none;
+}
+
+body{
+  width:100vw;
+  min-height:100vh;
+  background-color: white;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  padding-top:100px;
+}
+
+#gossipInput{
+    border: 2px solid #00000033;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: medium;
+    transition: all 0.2s;
+}
+
+#gossipInput:focus{
+    border: 2px solid black;
+}
+
+#btnSubmit{
+    color:white;
+    cursor: pointer;
+    width:75px;
+    height:40px;
+    background-color:#000000;
+    opacity:0.3;
+    transition: all 0.2s;
+    margin:10px;
+}
+
+#btnSubmit:hover{
+opacity:1;
+}
+
+#btnSubmit:focus{
+outline:none;
+}
