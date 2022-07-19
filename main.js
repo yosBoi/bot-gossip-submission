@@ -21,6 +21,8 @@ app.use(express.json());
 
 app.use('/submit', require('./api/submit'));
 
+app.use('/fetch/gossip', require('./api/fetchGossip'));
+
 app.use(express.static(path.join(__dirname, 'static')));
 
 app.listen(process.env.PORT || 5000);
