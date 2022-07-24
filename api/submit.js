@@ -1,23 +1,23 @@
 const express = require('express');
 const router = express.Router();
 
-const gossipData = require('../models/gossipData');
+const infoData = require('../models/infoData');
 
 router.post('/', async (req, res) => {
-    if(req.body.gossipText.length < 1){
+    if(req.body.infoText.length < 1){
         return res.json({
-            "output": "Failure! Gossip must be atleast 1 character long"
+            "output": "Failure! info must be atleast 1 character long"
         })
     }
     else{
-        let newGossipData = new gossipData({
-            gossipText: `${req.body.gossipText}`
+        let newinfoData = new infoData({
+            infoText: `${req.body.infoText}`
         })
 
-        newGossipData.save()
+        newinfoData.save()
         .then( () => {
             return res.json({
-                "output": "Gossip submitted successfully!"
+                "output": "Info submitted successfully!"
             })
         })
         .catch(err => {

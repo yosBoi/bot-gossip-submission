@@ -1,14 +1,14 @@
-const gossipInput = document.getElementById("gossipInput");
+const infoInput = document.getElementById("infoInput");
 const btnSubmit = document.getElementById("btnSubmit");
 const ouptut = document.getElementById("output");
 
 btnSubmit.addEventListener('click', () => {
     
-    let gossipData = {
-        "gossipText" : `${gossipInput.value}`
+    let infoData = {
+        "infoText" : `${infoInput.value}`
     }
 
-    axios.post('/submit', gossipData)
+    axios.post('/submit', infoData)
     .then(res => {
         ouptut.innerText = res.data.output;
     })

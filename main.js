@@ -21,7 +21,7 @@ app.use(express.json());
 
 app.use('/submit', require('./api/submit'));
 
-app.use('/fetch/gossip', require('./api/fetchGossip'));
+app.use('/fetch/info', require('./api/fetchInfo'));
 
 app.use(express.static(path.join(__dirname, 'static')));
 
